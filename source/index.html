@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru" data-validate="html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spreent</title>
+  <link rel="preload" href="fonts/inter-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/inter-semibold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/looswide-bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/looswide-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/looswide-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/manrope-extrabold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2">
+  <link rel="icon" href="favicon.ico">
+  <!-- <link rel="icon" type="image/png" href="public/favicon-32x32.png"> -->
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
+
+<body class="page-body">
+  <div class="overlay"></div>
+  <header class="header">
+    <div class="header__container">
+      <div class="logo">
+        <img src="./img/svg/logo.svg" width="126" height="28" alt="Логотип">
+      </div>
+      <div class="header__nav">
+        <a class="header__button button" href="#">Начать</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li>
+              <a href="#">Об академии</a>
+            </li>
+            <li>
+              <a href="#">Курсы</a>
+            </li>
+            <li>
+              <a href="#">Корпоративное обучение</a>
+            </li>
+          </ul>
+          <button class="nav__toggle" type="button" aria-label="Открыть навигацию.">
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="visually-hidden">Обучение в академии Spreent.</h1>
+      <div class="hero__photo-content hero__photo-content--1">
+        <div class="hero__img-desc">
+          <span></span>
+          <p>Артур</p>
+        </div>
+        <div class="hero__img">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/jpeg"
+              srcset="./img/hero-1-desk.jpg 1x, ./img/hero-1-desk@2x.jpg 2x" width="329" height="200">
+            <img src="./img/hero-1.jpg" srcset="./img/hero-1@2x.jpg" width="221" height="135" alt="Фотография Артура.">
+          </picture>
+        </div>
+      </div>
+      <div class="hero__text-content">
+        <p>—Опыт, практика,</p>
+        <p>актуальные знания</p>
+        <span>Главные ценности, вокруг которых строится обучение в spreent</span>
+        <a class="hero__button button" href="#">Начать учиться</a>
+      </div>
+      <div class="hero__photo-content hero__photo-content--2">
+        <div class="hero__img">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/jpeg"
+              srcset="./img/hero-2-desk.jpg 1x, ./img/hero-2-desk@2x.jpg 2x" width="175" height="256">
+            <img src="./img/hero-2.jpg" srcset="./img/hero-2@2x.jpg" width="117" height="171" alt="Фотография Сергея.">
+          </picture>
+        </div>
+        <div class="hero__img-desc">
+          <span></span>
+          <p>Сергей</p>
+        </div>
+      </div>
+      <div class="hero__photo-content hero__photo-content--3">
+        <div class="hero__img-desc">
+          <span></span>
+          <p>Миша</p>
+        </div>
+        <div class="hero__img">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/jpeg"
+              srcset="./img/hero-3-desk.jpg 1x, ./img/hero-3-desk@2x.jpg 2x" width="329" height="200">
+            <img src="./img/hero-3.jpg" srcset="./img/hero-3@2x.jpg" width="221" height="135" alt="Фотография Миши.">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2 class="title">Почему выбирают академию spreent</h2>
+      <ul class="about__list">
+        <li class="card card--skill">
+          <div class="card__content">
+            <span>Что я получу?</span>
+            <h3>Практические навыки</h3>
+            <p>Даем конкретные знания по профессии. Тренируемся на реальных проектах и&nbsp;делаем свой продукт</p>
+          </div>
+          <div class="card__picture">
+            <picture>
+              <img src="./img/stats-skill.png" srcset="./img/stats-skill@2x.png" width="390" height="442" alt="">
+            </picture>
+          </div>
+        </li>
+        <li class="card card--teacher">
+          <div class="card__content">
+            <span>Кто будет учить?</span>
+            <h3>Опытные преподаватели</h3>
+            <p>В школе преподают эксперты-практики, которые прямо сейчас работают в крупных компаниях индустрии</p>
+          </div>
+          <div class="card__picture">
+            <picture><img src="./img/stats-teacher.png" srcset="./img/stats-teacher@2x.png" width="286" height="380"
+                alt=""></picture>
+          </div>
+        </li>
+        <li class="card card--info">
+          <div class="card__content">
+            <span>Что мне дадут?</span>
+            <h3>Актуальные знания</h3>
+            <p>Знаем, какие навыки нужны работодателям. Составляем программы, ориентируясь на тенденции рынка</p>
+          </div>
+          <div class="card__picture">
+            <picture><img src="./img/stats-round.png" srcset="./img/stats-round@2x.png" width="438" height="464" alt="">
+            </picture>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="community">
+      <h2 class="visually-hidden">Выпускники курсов.</h2>
+      <div class="community__content">
+        <ul class="community__list">
+          <li class="community__item">
+            <picture><img src="./img/photo-1.jpg" srcset="./img/photo-1@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника."></picture>
+          </li>
+          <li class="community__item">
+            <picture><img src="./img/photo-2.jpg" srcset="./img/photo-2@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника."></picture>
+          </li>
+          <li class="community__item">
+            <picture><img src="./img/photo-3.jpg" srcset="./img/photo-3@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника."></picture>
+          </li>
+          <li class="community__item">
+            <picture><img src="./img/photo-4.jpg" srcset="./img/photo-4@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника."></picture>
+          </li>
+          <li class="community__item">
+            <span>+</span>
+          </li>
+        </ul>
+        <div class="community__stats">
+          <div class="community__stats-hero">
+            <span class="community__stats-number">Более 100</span>
+            <p class="community__stats-text">выпускников за все время<br>работы академии</p>
+          </div>
+          <ul class="community__stats-list">
+            <li>
+              <span class="community__stats-number">78%</span>
+              <p class="community__stats-text">готовы рекомендовать академию<br>spreent своим друзьям и коллегам</p>
+            </li>
+            <li>
+              <span class="community__stats-number">89%</span>
+              <p class="community__stats-text">отмечают качество и пользу<br>знаний, полученных в spreent</p>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="price">
+      <h2 class="title">Стоимость обучения</h2>
+      <div class="price__content">
+        <h3>Базовый план</h3>
+        <ul class="price__list">
+          <li class="price__item">
+            <span></span>
+            <p>Доступ к материалам навсегда</p>
+          </li>
+          <li class="price__item">
+            <span></span>
+            <p>С обратной связью и д/з</p>
+          </li>
+          <li class="price__item">
+            <span></span>
+            <p>Ревью портфолио и резюме</p>
+          </li>
+          <li class="price__item">
+            <span></span>
+            <p>Начало сразу или с группой</p>
+          </li>
+          <li class="price__item">
+            <span></span>
+            <p>Скидка 24% при полной оплате</p>
+          </li>
+          <li class="price__item">
+            <span></span>
+            <p>Сертификат по окончанию курса</p>
+          </li>
+        </ul>
+        <div class="price__cost-wrapper">
+          <div class="price__cost">
+            <p>83 890 &#8381; <del>110 388 &#8381;</del></p>
+            <p>или</p>
+            <p>419 000 &#8376; <del>552 000 &#8376;</del></p>
+          </div>
+          <a class="button" href="#">Купить курс</a>
+        </div>
+      </div>
+    </section>
+    <section class="work">
+      <div class="work__text-content">
+        <h2 class="title">Где работают<br>наши выпускники</h2>
+        <p>Начните работать в крупнейших<br>компаниях индустрии</p>
+        <a class="work__button button" href="#">Присоединиться</a>
+      </div>
+      <ul class="work__list">
+        <li class="work__item work__item--sber"><a class="work__link" href=""><svg width="80" height="21">
+              <use href="/__spritemap#sprite-sber"></use>
+            </svg></a></li>
+        <li class="work__item work__item--mts"><a class="work__link" href=""><svg width="28" height="28">
+              <use href="/__spritemap#sprite-mts"></use>
+            </svg></a></li>
+        <li class="work__item work__item--vtb"><a class="work__link" href=""><svg width="62" height="22">
+              <use href="/__spritemap#sprite-vtb"></use>
+            </svg></a></li>
+        <li class="work__item work__item--mish"><a class="work__link" href=""><svg width="53" height="20">
+              <use href="/__spritemap#sprite-mish"></use>
+            </svg></a></li>
+        <li class="work__item work__item--chulakov"><a class="work__link" href=""><svg width="89" height="10">
+              <use href="/__spritemap#sprite-chulakov"></use>
+            </svg></a></li>
+        <li class="work__item work__item--vc"><a class="work__link" href=""><svg width="29" height="27">
+              <use href="/__spritemap#sprite-vc"></use>
+            </svg></a></li>
+        <li class="work__item work__item--epam"><a class="work__link" href=""><svg width="58" height="18">
+              <use href="/__spritemap#sprite-epam"></use>
+            </svg></a></li>
+        <li class="work__item work__item--sportmaster"><a class="work__link" href=""><svg width="112" height="17">
+              <use href="/__spritemap#sprite-sportmaster"></use>
+            </svg></a></li>
+        <li class="work__item work__item--rustore"><a class="work__link" href=""><svg width="99" height="25">
+              <use href="/__spritemap#sprite-rustore"></use>
+            </svg></a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="certificate">
+      <div class="certificate__wrapper">
+        <div class="certificate__content">
+          <h2 class="title">Получи сертификат об&nbsp;успешном завершении курса</h2>
+          <p>Обучение ведется на основании лицензии государтсвенного образцм</p>
+          <a class="certificate__button button" href="#">Начать учиться</a>
+        </div>
+        <div class="certificate__img">
+          <picture>
+            <img src="./img/certificate.jpg" srcset="./img/certificate@2x.jpg" width="448" height="300"
+              alt="Сертификат об окончании курса.">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <h2 class="title">Сделайте апгрейд карьеры</h2>
+      <form class="form__content" action="http://echo.htmlacademy.ru/" method="post">
+        <label><input class="form__input" type="text" name="name" placeholder="Имя"></label>
+        <label><input class="form__input" type="tel" name="tel" placeholder="Телефон"></label>
+        <label><input class="form__input" type="email" name="email" placeholder="Почта"></label>
+        <button class="form__button button button--green" type="submit">Оставить заявку</button>
+      </form>
+      <p>Нажимая кнопку «Оставить заявку», вы подтверждаете<br>согласие на обработку персональных данных</p>
+    </section>
+    <section class="footer__wrapper">
+      <div class="logo">
+        <img src="./img/svg/logo-light.svg" width="267" height="59" alt="Логотип">
+      </div>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">Об академии</a></li>
+        <li><a class="footer__link" href="#">Корпоративное обучение</a></li>
+        <li><a class="footer__link" href="#">Оплата</a></li>
+        <li><a class="footer__link" href="#">Личный кабинет</a></li>
+        <li><a class="footer__link" href="#">Связаться с нами</a></li>
+        <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+      </ul>
+      <div class="footer__developed">
+        <p>Академия Богдана Гончаренко © 2024</p>
+        <svg width="103" height="41">
+          <use href="/__spritemap#sprite-by-mish"></use>
+        </svg>
+      </div>
+    </section>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

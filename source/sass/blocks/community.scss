@@ -1,0 +1,154 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+
+.community {
+  padding-top: 60px;
+  padding-bottom: 117px;
+}
+
+.community__content {
+  @include m.container;
+  padding-top: 30px;
+
+  display: grid;
+  row-gap: 20px;
+
+  border-top: 1px solid v.$light-mint;
+
+  @include m.desktop {
+    row-gap: 35px;
+  }
+}
+
+.community__list {
+  @include m.list-reset;
+  padding: 27px 22px;
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  background: radial-gradient(92.49% 94.44% at 2.96% 50%, #daeef4 18.98%, v.$light-green 50.96%, v.$default-white 88.74%);
+  border-radius: 32px;
+  overflow: hidden;
+  isolation: isolate;
+
+  @include m.desktop {
+    padding: 20px 110px 20px 10px;
+  }
+}
+
+.community__item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  clip-path: circle(50% at 50% 50%);
+
+}
+
+.community__item span {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: block;
+  border: 2px solid v.$accent;
+  border-radius: 50%;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 22px);
+    left: 50%;
+    width: 2px;
+    height: 45px;
+    background-color: v.$accent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 22px);
+    width: 45px;
+    height: 2px;
+    background-color: v.$accent;
+  }
+}
+
+.community__item:not(:first-child) {
+  margin-left: -2px;
+}
+
+.community__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.community__item:not(:last-child) {
+  margin-right: -20px; // Используем margin-right для контроля наложения
+
+  /* Магия: вырезаем из текущей карты круглую область там, где ее перекрывает следующая */
+  /* Параметры:
+     100% 50% — центр выреза справа
+     51px — радиус выреза (половина ширины 47px + 4px ваша рамка)
+  */
+  -webkit-mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
+  mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
+}
+
+.community__stats {
+  display: grid;
+  gap: 30px;
+
+  @include m.desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.community__stats-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.community__stats-list {
+  @include m.list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.community__stats-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.community__stats-number {
+  font-family: v.$ff-second;
+  font-size: 90px;
+  line-height: 100%;
+  letter-spacing: -0.06em;
+}
+
+.community__stats-text {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 140%;
+  color: v.$black70;
+}

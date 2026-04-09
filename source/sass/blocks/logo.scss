@@ -1,0 +1,10 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.logo img {
+  color: v.$default-black;
+}
+
+.logo--light img {
+  color: v.$default-white;
+}

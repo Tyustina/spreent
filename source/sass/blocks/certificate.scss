@@ -1,0 +1,75 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+@use "../global/animations.scss";
+
+.certificate {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient(to bottom, #eef4f6 73.5%, #0d1627 26.5%);
+
+  @include m.desktop {
+    @include m.container;
+
+    background: linear-gradient(to bottom, v.$default-white 50%, v.$default-black 50%);
+  }
+}
+
+.certificate__wrapper {
+  @include m.container;
+
+  display: grid;
+  gap: 55px;
+
+  @include m.desktop {
+    width: auto;
+    padding: 0;
+    padding: 30px;
+    margin: 0;
+
+    grid-template-columns: 1fr 1fr;
+    column-gap: 150px;
+    background-color: v.$light-green;
+    border-radius: 32px;
+  }
+}
+
+
+.certificate__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.certificate__content p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 140%;
+  color: v.$black70;
+
+}
+
+.certificate__img {
+  position: relative;
+  width: 448px;
+  height: 300px;
+  margin: 0 auto;
+
+  border-radius: 16px;
+  overflow: hidden;
+  animation: scaleIn 0.3s ease-in;
+
+  @include m.desktop {
+    width: 660px;
+    height: 440px;
+  }
+}
+
+.certificate__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

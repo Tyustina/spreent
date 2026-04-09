@@ -1,0 +1,52 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.form {
+  @include m.container;
+
+  padding-top: 60px;
+  padding-bottom: 88px;
+
+  color: v.$default-white;
+
+}
+
+.form__content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: grid;
+  gap: 10px;
+
+  @include m.desktop {
+    grid-template-columns: 1fr 1fr 1fr max-content;
+  }
+}
+
+.form__input {
+  padding: 15px 25px;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 140%;
+  color: v.$black50;
+  background-color: v.$white20;
+  border: none;
+  border-radius: 100px;
+}
+
+.form__button {
+  margin-top: 4px;
+
+  justify-self: flex-start;
+}
+
+.form p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: v.$white50;
+}

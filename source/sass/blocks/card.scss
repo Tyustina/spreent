@@ -1,0 +1,131 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+@use "../global/animations.scss";
+
+.card {
+  position: relative;
+  padding: 30px;
+  width: 450px;
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  @include m.tablet {
+    width: 500px;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  @include m.desktop {
+    width: 785px;
+    min-height: 500px;
+  }
+}
+
+.card span {
+  padding: 7px 18px;
+  margin-bottom: 13px;
+
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+
+  border-radius: 100px;
+  backdrop-filter: blur(30px);
+}
+
+.card__content {
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card__content h3 {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-family: v.$ff-second;
+  font-size: 30px;
+  line-height: 102%;
+  font-weight: 500;
+}
+
+.card__content p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 140%;
+
+  @include m.desktop {
+    margin-top: auto;
+  }
+}
+
+.card--skill {
+  color: v.$default-white;
+
+  background: radial-gradient(259.81% 137.32% at 0% 3.7%, #002fa8 0%, #001a68 100%);
+
+  @include m.tablet {
+    // grid-column: 5/span 6;
+    // grid-row: 1/span 2;
+    z-index: 1;
+  }
+
+}
+
+.card--teacher {
+  background-color: v.$green;
+
+  @include m.tablet {
+    transform: translateY(-60px);
+    // grid-column: 1/span 6;
+    // grid-row: 3;
+  }
+}
+
+.card--info {
+  background-color: v.$light-mint;
+
+  @include m.tablet {
+    transform: translateY(-50%);
+    // grid-column: 5/span 6;
+    // grid-row: 5/span 2;
+    z-index: 1;
+  }
+}
+
+
+.card span {
+  background: rgba(0, 39, 178, 0.06);
+}
+
+.card--skill span {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card__picture {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+.card--info>.card__picture {
+  bottom: -58px;
+  right: -100px;
+}
+
+.card--info>.card__picture img {
+  transform: rotate(-30deg);
+
+  // animation: spin 20s linear infinite;
+}

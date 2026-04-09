@@ -1,0 +1,29 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.button {
+  padding: 14px 25px 16px 25px;
+  margin-top: 2px;
+
+  font-family: v.$ff-second;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: v.$default-white;
+  text-decoration: none;
+
+  background-color: v.$accent;
+  border: none;
+  border-radius: 136px;
+
+  cursor: pointer;
+}
+
+.button--green {
+  padding: 14px 25px 16px 25px;
+
+  color: v.$default-black;
+
+  background-color: v.$green;
+
+}

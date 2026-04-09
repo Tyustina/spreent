@@ -1,0 +1,56 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.header {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  z-index: 5;
+
+  border-bottom: 1px solid v.$black10;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 70px;
+    height: 100%;
+    width: 1px;
+    background-color: v.$black10;
+  }
+
+  @include m.desktop {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.header__container {
+  @include m.container;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  @include m.large-tablet {
+    flex-direction: row-reverse;
+    column-gap: 100px;
+  }
+}
+
+.header__button {
+  margin-top: -2px;
+  margin-right: 34px;
+  padding: 6px 15px 7px;
+
+  @include m.tablet {
+    margin: 0;
+  }
+}

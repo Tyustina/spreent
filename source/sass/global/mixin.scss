@@ -1,0 +1,42 @@
+@use "./variables.scss" as v;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin large-tablet {
+  @media (min-width: v.$large-tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop-width) {
+    @content;
+  }
+}
+
+@mixin container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media (min-width: v.$tablet-width) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 1440px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

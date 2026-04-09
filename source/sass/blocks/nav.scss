@@ -1,0 +1,100 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.nav__list {
+  @include m.list-reset;
+  @include m.container;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 36px;
+  margin-top: 1px;
+
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: v.$default-white;
+
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transition-behavior: allow-discrete;
+
+  @include m.large-tablet {
+    position: static;
+    width: auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    opacity: 1;
+  }
+}
+
+.nav.is-open>.nav__list {
+  display: flex;
+  opacity: 1;
+}
+
+@starting-style {
+  .nav.is-open>.nav__list {
+    opacity: 0;
+  }
+}
+
+.nav__list a {
+  font-family: v.$ff-second;
+  font-size: 30px;
+  line-height: 102%;
+  font-weight: 500;
+  color: v.$default-black;
+
+  text-decoration: none;
+
+  @include m.large-tablet {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+.nav__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  background-color: transparent;
+  border: none;
+
+  @include m.desktop {
+    display: none;
+  }
+}
+
+.nav__toggle span:first-child,
+.nav__toggle span:last-child {
+  width: 28px;
+  height: 2px;
+
+  background-color: v.$default-black;
+}
+
+.nav.is-open>.nav__toggle span:first-child {
+  position: relative;
+  top: 11px;
+
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.nav.is-open>.nav__toggle span:last-child {
+  position: relative;
+  bottom: 7px;
+
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in;
+}

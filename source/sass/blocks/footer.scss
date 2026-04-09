@@ -1,0 +1,53 @@
+@use "../global/mixin.scss" as m;
+@use "../global/variables.scss" as v;
+
+.footer {
+  padding-bottom: 38px;
+
+  background-color: v.$default-black;
+}
+
+.footer__wrapper {
+  @include m.container;
+
+  padding-top: 40px;
+
+  border-top: 1px solid v.$white15;
+
+}
+
+.footer__list {
+  @include m.list-reset;
+
+  padding-top: 40px;
+  padding-bottom: 90px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__link {
+  font-family: v.$ff-second;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: v.$default-white;
+  text-decoration: none;
+}
+
+.footer__developed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.footer__developed p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: v.$white50;
+}
