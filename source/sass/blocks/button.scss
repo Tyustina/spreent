@@ -13,11 +13,28 @@
   text-decoration: none;
 
   background-color: v.$accent;
-  border: none;
+  outline: 2px solid transparent;
+  box-sizing: border-box;
   border-radius: 136px;
-
+  transition: all 0.3s ease;
   cursor: pointer;
 }
+
+.button:hover,
+.button:focus {
+  position: relative;
+  background-color: transparent;
+  color: v.$default-black;
+  outline: 2px solid v.$accent;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+  color: v.$black50;
+}
+
 
 .button--green {
   padding: 14px 25px 16px 25px;
@@ -26,4 +43,19 @@
 
   background-color: v.$green;
 
+}
+
+.button--green:hover,
+.button--green:focus {
+  position: relative;
+  background-color: transparent;
+  color: v.$default-white;
+  outline: 2px solid v.$green;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button--green:active {
+  color: v.$white50;
 }

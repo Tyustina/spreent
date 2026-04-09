@@ -5,6 +5,10 @@
 .community {
   padding-top: 60px;
   padding-bottom: 117px;
+
+  @include m.desktop {
+    padding-bottom: 80px;
+  }
 }
 
 .community__content {
@@ -17,7 +21,7 @@
   border-top: 1px solid v.$light-mint;
 
   @include m.desktop {
-    row-gap: 35px;
+    row-gap: 32px;
   }
 }
 
@@ -36,7 +40,7 @@
   isolation: isolate;
 
   @include m.desktop {
-    padding: 20px 110px 20px 10px;
+    padding: 24px 110px 24px 10px;
   }
 }
 
@@ -52,8 +56,12 @@
 
   border-radius: 50%;
 
-  clip-path: circle(50% at 50% 50%);
+  // clip-path: circle(50% at 50% 50%);
 
+  @include m.desktop {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .community__item span {
@@ -64,6 +72,11 @@
   border: 2px solid v.$accent;
   border-radius: 50%;
   background-color: transparent;
+
+  @include m.desktop {
+    width: 120px;
+    height: 120px;
+  }
 
   &::before {
     content: "";
@@ -100,13 +113,16 @@
 .community__item:not(:last-child) {
   margin-right: -20px; // Используем margin-right для контроля наложения
 
-  /* Магия: вырезаем из текущей карты круглую область там, где ее перекрывает следующая */
-  /* Параметры:
-     100% 50% — центр выреза справа
-     51px — радиус выреза (половина ширины 47px + 4px ваша рамка)
-  */
   -webkit-mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
   mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
+
+  @include m.desktop {
+    margin-right: -28px;
+
+    -webkit-mask-image: radial-gradient(circle 65px at calc(100% + 30px) 50%, transparent 100%, black 100%);
+    mask-image: radial-gradient(circle 65px at calc(100% + 30px) 50%, transparent 100%, black 100%);
+
+  }
 }
 
 .community__stats {
@@ -122,6 +138,10 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @include m.desktop {
+    margin-top: 12px;
+  }
 }
 
 .community__stats-list {
@@ -130,12 +150,23 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include m.desktop {
+    margin-left: 78px;
+
+    gap: 40px;
+    justify-self: center;
+  }
 }
 
 .community__stats-list li {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @include m.desktop {
+    gap: 14px;
+  }
 }
 
 .community__stats-number {
@@ -143,6 +174,19 @@
   font-size: 90px;
   line-height: 100%;
   letter-spacing: -0.06em;
+}
+
+.community__stats-hero .community__stats-number {
+  @include m.desktop {
+    font-size: 120px;
+  }
+}
+
+.community__stats-list .community__stats-number {
+  @include m.desktop {
+    line-height: 88%;
+    letter-spacing: 0;
+  }
 }
 
 .community__stats-text {

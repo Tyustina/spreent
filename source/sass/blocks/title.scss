@@ -9,4 +9,11 @@
   line-height: 98%;
   font-weight: 500;
   letter-spacing: -0.01em;
+
+  @include m.desktop {
+    width: 50%;
+
+    font-size: 55px;
+    line-height: 96%;
+  }
 }

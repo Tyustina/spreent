@@ -9,6 +9,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include m.desktop {
+    gap: 50px;
+    padding-bottom: 100px;
+  }
 }
 
 .price__content {
@@ -20,9 +25,10 @@
   border-radius: 32px;
 
   @include m.desktop {
+    padding-right: 14px;
     grid-template-columns: 2fr 1fr;
 
-    gap: 140px;
+    gap: 110px 150px;
   }
 }
 
@@ -37,6 +43,9 @@
   @include m.desktop {
     grid-column: 1/2;
     grid-row: 1/2;
+
+    font-size: 34px;
+    line-height: 102%;
   }
 }
 
@@ -53,12 +62,14 @@
   border-bottom: 1px solid v.$black10;
 
   @include m.desktop {
+    padding-bottom: 60px;
     grid-column: 1/2;
     grid-row: 2/3;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     // grid-auto-flow: column;
+    gap: 10px 78px;
     border: none;
   }
 }
@@ -138,6 +149,7 @@
   align-items: flex-end;
 
   @include m.desktop {
+    padding: 0;
     grid-column: 2/3;
     grid-row: 1/3;
 
@@ -153,7 +165,23 @@
   gap: 2px;
 }
 
-.price__cost p {
+.price__cost h4 {
+  display: none;
+
+  @include m.desktop {
+    margin: 0;
+    margin-bottom: 2px;
+
+    display: block;
+    font-family: v.$ff-second;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 500;
+  }
+}
+
+.price__cost p,
+.price__cost span {
   margin: 0;
 
   font-size: 16px;
@@ -165,8 +193,7 @@
   }
 }
 
-.price__cost p:first-child,
-.price__cost p:last-child {
+.price__cost p {
   font-family: v.$ff-second;
   font-size: 34px;
   line-height: 102%;
