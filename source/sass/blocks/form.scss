@@ -9,6 +9,10 @@
 
   color: v.$default-white;
 
+  @include m.desktop {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 }
 
 .form__content {
@@ -19,7 +23,16 @@
   gap: 10px;
 
   @include m.desktop {
+    padding-bottom: 36px;
+
     grid-template-columns: 1fr 1fr 1fr max-content;
+    gap: 4px;
+  }
+}
+
+.form h2 {
+  @include m.desktop {
+    width: unset;
   }
 }
 
@@ -33,12 +46,28 @@
   background-color: v.$white20;
   border: none;
   border-radius: 100px;
+
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.form__content label {
+  position: relative;
+}
+
+.form__input--error {
+  outline: 2px solid v.$error;
+  color: v.$error;
 }
 
 .form__button {
   margin-top: 4px;
 
   justify-self: flex-start;
+
+  @include m.desktop {
+    margin-top: -1px;
+    margin-right: -2px;
+  }
 }
 
 .form p {
@@ -49,4 +78,18 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   color: v.$white50;
+}
+
+.form a {
+  text-decoration: none;
+  color: v.$white50;
+}
+
+.form a:hover,
+.form a:focus {
+  text-decoration: underline;
+}
+
+.form a:active {
+  color: $white20
 }

@@ -8,8 +8,8 @@
   background: linear-gradient(to bottom, #eef4f6 73.5%, #0d1627 26.5%);
 
   @include m.desktop {
-    @include m.container;
-
+    padding: 0 25px;
+    margin: 0 auto;
     background: linear-gradient(to bottom, v.$default-white 50%, v.$default-black 50%);
   }
 }
@@ -21,10 +21,10 @@
   gap: 55px;
 
   @include m.desktop {
-    width: auto;
+    max-width: 1360px;
     padding: 0;
     padding: 30px;
-    margin: 0;
+
 
     grid-template-columns: 1fr 1fr;
     column-gap: 150px;
@@ -41,13 +41,27 @@
   align-items: flex-start;
 }
 
+.certificate__title {
+  @include m.desktop {
+    width: unset;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+}
+
 .certificate__content p {
   margin: 0;
 
   font-size: 18px;
   line-height: 140%;
   color: v.$black70;
+}
 
+.certificate a {
+  @include m.desktop {
+    margin-top: 5px;
+  }
 }
 
 .certificate__img {
@@ -59,6 +73,11 @@
   border-radius: 16px;
   overflow: hidden;
   animation: scaleIn 0.3s ease-in;
+
+  @include m.tablet {
+    width: 597px;
+    height: 400px;
+  }
 
   @include m.desktop {
     width: 660px;

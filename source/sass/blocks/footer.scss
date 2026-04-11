@@ -14,6 +14,12 @@
 
   border-top: 1px solid v.$white15;
 
+  @include m.desktop {
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+    gap: 68px 47px;
+  }
 }
 
 .footer__list {
@@ -22,9 +28,26 @@
   padding-top: 40px;
   padding-bottom: 90px;
 
-  display: flex;
-  flex-direction: column;
+  columns: 1;
   gap: 15px;
+
+  @include m.tablet {
+    columns: 2;
+    column-gap: 40px;
+  }
+
+  @include m.desktop {
+    padding: 0;
+    margin: 0 auto;
+    grid-column: 2/-1;
+  }
+}
+
+.footer__list li {
+  @include m.desktop {
+    break-inside: avoid-column;
+    margin-bottom: 15px;
+  }
 }
 
 .footer__link {
@@ -41,6 +64,13 @@
   flex-wrap: wrap;
   align-items: end;
   justify-content: space-between;
+
+  @include m.desktop {
+    width: 73%;
+
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
 }
 
 .footer__developed p {
@@ -50,4 +80,10 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   color: v.$white50;
+}
+
+.footer__developed-logo {
+  @include m.desktop {
+    padding: 6px;
+  }
 }

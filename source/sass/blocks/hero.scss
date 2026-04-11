@@ -39,6 +39,8 @@
 }
 
 .hero__title {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -59,6 +61,10 @@
   font-weight: 500;
   letter-spacing: -0.01em;
 
+  @include m.tablet {
+    font-size: 56px;
+  }
+
   @include m.desktop {
     font-size: 90px;
     line-height: 88%;
@@ -67,12 +73,17 @@
 }
 
 .hero__title p:first-child {
-  margin-right: 300px;
+  @include m.desktop {
+    margin-right: 300px;
+  }
 }
 
 .hero__title p:last-child {
-  margin-right: 86px;
-  align-self: flex-end;
+  margin-left: auto;
+
+  @include m.desktop {
+    margin-right: 86px;
+  }
 }
 
 .hero__text-content span {
@@ -152,7 +163,7 @@
 }
 
 .hero__photo-content--2 {
-  margin-top: 5px;
+  margin-top: -1px;
   grid-column: 1/2;
   grid-row: 3/4;
 
@@ -184,7 +195,7 @@
 }
 
 .hero__photo-content--3 {
-  margin-top: 26px;
+  margin-top: 54px;
   grid-column: 2/3;
   grid-row: 3/4;
 
@@ -194,10 +205,14 @@
   justify-items: start;
   row-gap: 29px;
 
+  @include m.large-tablet {
+    grid-column: 4/6;
+
+  }
+
   @include m.desktop {
     margin: 0;
 
-    grid-column: 4/6;
     display: flex;
     flex-direction: row-reverse;
     gap: 46px;
@@ -222,7 +237,7 @@
   width: 221px;
   height: 135px;
 
-  @include m.desktop {
+  @include m.tablet {
     width: 329px;
     height: 200px;
   }
@@ -232,7 +247,7 @@
   width: 117px;
   height: 171px;
 
-  @include m.desktop {
+  @include m.tablet {
     width: 175px;
     height: 256px;
   }

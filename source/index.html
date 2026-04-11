@@ -125,7 +125,7 @@
             <picture>
               <source media="(min-width: 1440px)"
                 srcset="./img/stats-teacher-desk.png 1x, ./img/stats-teacher-desk@2x.png 2x" type="image/png"
-                width="482" height="502">
+                width="441" height="489">
               <img src="./img/stats-teacher.png" srcset="./img/stats-teacher@2x.png" width="286" height="380" alt="">
             </picture>
           </div>
@@ -137,7 +137,11 @@
             <p>Знаем, какие навыки нужны работодателям. Составляем программы, ориентируясь на тенденции рынка</p>
           </div>
           <div class="card__picture">
-            <picture><img src="./img/stats-round.png" srcset="./img/stats-round@2x.png" width="438" height="464" alt="">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="./img/stats-round-desk.png 1x, ./img/stats-round-desk@2x.png 2x" type="image/png" width="562"
+                height="549">
+              <img src="./img/stats-round.png" srcset="./img/stats-round@2x.png" width="438" height="464" alt="">
             </picture>
           </div>
         </li>
@@ -174,11 +178,11 @@
           </div>
           <ul class="community__stats-list">
             <li>
-              <span class="community__stats-number">78%</span>
+              <p class="community__stats-number">78%</p>
               <p class="community__stats-text">готовы рекомендовать академию<br>spreent своим друзьям и коллегам</p>
             </li>
             <li>
-              <span class="community__stats-number">89%</span>
+              <span class="community__stats-number" data-target="89">89%</span>
               <p class="community__stats-text">отмечают качество и пользу<br>знаний, полученных в spreent</p>
 
             </li>
@@ -234,42 +238,41 @@
         <a class="work__button button" href="#">Присоединиться</a>
       </div>
       <ul class="work__list">
-        <li class="work__item work__item--sber"><a class="work__link" href="https://www.sberbank.ru/">
-            <img src="./img/svg/sber.svg" width="80" height="21" alt="Логотип Сбербанк."></a></li>
-        <li class="work__item work__item--mts"><a class="work__link" href="https://mts.ru/">
-            <img src="./img/svg/mts.svg" width="28" height="28" alt="Логотим МТС.">
-          </a></li>
-        <li class="work__item work__item--vtb"><a class="work__link" href="https://www.vtb.ru/">
-            <img src="./img/svg/vtb.svg" width="62" height="22" alt="Логотип ВТБ.">
-          </a></li>
-        <li class="work__item work__item--mish"><a class="work__link" href="https://mish.design/">
-            <img src="./img/svg/mish.svg" width="53" height="20" alt="Логотип Mish.">
-          </a></li>
-        <li class="work__item work__item--chulakov"><a class="work__link" href="https://chulakov.ru/">
-            <img src="./img/svg/chulakov.svg" width="89" height="10" alt="Логотип Chulakov.">
-          </a></li>
-        <li class="work__item work__item--vc"><a class="work__link" href="https://vc.ru/">
-            <img src="./img/svg/vc.svg" width="29" height="27" alt="Логотип VC.">
-          </a></li>
-        <li class="work__item work__item--epam"><a class="work__link" href="https://www.epam.com/">
-            <img src="./img/svg/epam.svg" width="58" height="18" alt="логотип EPAM.">
-          </a></li>
-        <li class="work__item work__item--sportmaster"><a class="work__link" href="https://www.sportmaster.ru/">
-            <img src="./img/svg/sportmaster.svg" width="112" height="17" alt="Логотип Спортмастер.">
-          </a></li>
-        <li class="work__item work__item--rustore"><a class="work__link" href="https://www.rustore.ru/">
-            <img src="./img/svg/rustore.svg" width="99" height="25" alt="Логотип RuStore.">
-          </a></li>
+        <li class="work__item work__item--sber">
+          <img src="./img/svg/sber.svg" width="80" height="21" alt="Логотип Сбербанк.">
+        </li>
+        <li class="work__item work__item--mts">
+          <img src="./img/svg/mts.svg" width="28" height="28" alt="Логотим МТС.">
+        </li>
+        <li class="work__item work__item--vtb">
+          <img src="./img/svg/vtb.svg" width="62" height="22" alt="Логотип ВТБ.">
+        </li>
+        <li class="work__item work__item--mish">
+          <img src="./img/svg/mish.svg" width="53" height="20" alt="Логотип Mish.">
+        </li>
+        <li class="work__item work__item--chulakov">
+          <img src="./img/svg/chulakov.svg" width="89" height="10" alt="Логотип Chulakov.">
+        </li>
+        <li class="work__item work__item--vc">
+          <img src="./img/svg/vc.svg" width="29" height="27" alt="Логотип VC.">
+        </li>
+        <li class="work__item work__item--epam">
+          <img src="./img/svg/epam.svg" width="58" height="18" alt="логотип EPAM.">
+        </li>
+        <li class="work__item work__item--sportmaster">
+          <img src="./img/svg/sportmaster.svg" width="112" height="17" alt="Логотип Спортмастер.">
+        </li>
+        <li class="work__item work__item--rustore">
+          <img src="./img/svg/rustore.svg" width="99" height="25" alt="Логотип RuStore.">
+        </li>
       </ul>
     </section>
-  </main>
-  <footer class="footer">
     <section class="certificate">
       <div class="certificate__wrapper">
         <div class="certificate__content">
-          <h2 class="title">Получи сертификат об&nbsp;успешном завершении курса</h2>
-          <p>Обучение ведется на основании лицензии государтсвенного образцм</p>
-          <a class="certificate__button button" href="#">Начать учиться</a>
+          <h2 class="certificate__title title">Получи сертификат об&nbsp;успешном завершении курса</h2>
+          <p>Обучение ведется на основании лицензии государственного образца</p>
+          <a class="button" href="#">Начать учиться</a>
         </div>
         <div class="certificate__img">
           <picture>
@@ -279,15 +282,23 @@
         </div>
       </div>
     </section>
+  </main>
+  <footer class="footer">
     <section class="form">
       <h2 class="title">Сделайте апгрейд карьеры</h2>
       <form class="form__content" action="http://echo.htmlacademy.ru/" method="post">
-        <label><input class="form__input" type="text" name="name" placeholder="Имя"></label>
-        <label><input class="form__input" type="tel" name="tel" placeholder="Телефон"></label>
-        <label><input class="form__input" type="email" name="email" placeholder="Почта"></label>
+        <label><input class="form__input form__input--name" type="text" name="name" placeholder="Имя"
+            title="Введите ваше имя кириллицей" required>
+        </label>
+        <label><input class="form__input form__input--tel" type="tel" name="tel" placeholder="Телефон"
+            title="Введите полный номер, начинающийся с +7 или 8" required></label>
+        <label><input class="form__input form__input--email" type="email" name="email" placeholder="Почта"
+            title="Введите адрес в формате example@example.com" required>
+        </label>
         <button class="form__button button button--green" type="submit">Оставить заявку</button>
       </form>
-      <p>Нажимая кнопку «Оставить заявку», вы подтверждаете<br>согласие на обработку персональных данных</p>
+      <p>Нажимая кнопку «Оставить заявку», вы подтверждаете<br><a href="#">согласие на обработку персональных данных</a>
+      </p>
     </section>
     <section class="footer__wrapper">
       <div class="logo">
@@ -303,7 +314,7 @@
       </ul>
       <div class="footer__developed">
         <p>Академия Богдана Гончаренко © 2024</p>
-        <a class="work__link" href="https://mish.design/">
+        <a class="footer__developed-logo" href="https://mish.design/">
           <img src="./img/svg/by-mish.svg" width="103" height="41" alt="Логотип Mish.">
         </a>
       </div>

@@ -10,6 +10,10 @@
   font-weight: 500;
   letter-spacing: -0.01em;
 
+  @include m.tablet {
+    font-size: 44px;
+  }
+
   @include m.desktop {
     width: 50%;
 

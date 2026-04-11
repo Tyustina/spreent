@@ -2,7 +2,7 @@
 @use "../global/variables.scss" as v;
 
 .button {
-  padding: 14px 25px 16px 25px;
+  padding: 14px 25px 15.5px 25px;
   margin-top: 2px;
 
   font-family: v.$ff-second;
@@ -22,13 +22,7 @@
 
 .button:hover,
 .button:focus {
-  position: relative;
-  background-color: transparent;
-  color: v.$default-black;
-  outline: 2px solid v.$accent;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px v.$accent80, 0 3px v.$accent80;
 }
 
 .button:active {
@@ -47,11 +41,9 @@
 
 .button--green:hover,
 .button--green:focus {
-  position: relative;
   background-color: transparent;
   color: v.$default-white;
   outline: 2px solid v.$green;
-  transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
     0 1px 3px rgba(0, 0, 0, 0.1);
 }

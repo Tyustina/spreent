@@ -4,9 +4,11 @@
 // import 'swiper/css';
 
 import { switchingNav } from './modules/nav.js';
+import { submitForm } from './modules/form.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   switchingNav();
+  submitForm();
 });
 
 window.addEventListener('resize', () => {
