@@ -3,6 +3,12 @@
 
 .logo img {
   color: v.$default-black;
+  transition: opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+.logo:hover img {
+  opacity: 0.6;
 }
 
 .logo--light img {

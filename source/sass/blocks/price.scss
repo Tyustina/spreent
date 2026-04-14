@@ -12,6 +12,7 @@
 
   @include m.desktop {
     gap: 50px;
+    padding-top: 60px;
     padding-bottom: 100px;
   }
 }
@@ -26,18 +27,34 @@
 
   @include m.desktop {
     padding-right: 14px;
-    grid-template-columns: 64% 36%;
-    gap: 110px 84px;
+    grid-template-columns: 843px 480px;
+    gap: 110px 83px;
   }
 }
 
+.price h2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in;
+}
+
+.price h2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .price__content h3 {
   margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
 
   font-family: v.$ff-second;
   font-size: 30px;
   line-height: 102%;
   font-weight: 500;
+
 
   @include m.desktop {
     grid-column: 1/2;
@@ -89,6 +106,7 @@
   height: 21px;
 
   display: block;
+  flex-shrink: 0;
 
   background-color: v.$accent;
   border-radius: 100%;
@@ -104,6 +122,10 @@
     background-image: url("/__spritemap#sprite-checkmark-view");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @include m.desktop {
+    margin-top: -4px;
   }
 }
 
@@ -148,7 +170,9 @@
     margin: 0;
     margin-bottom: 2px;
 
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+
     font-family: v.$ff-second;
     font-size: 18px;
     line-height: 140%;
@@ -165,6 +189,7 @@
 
   @include m.desktop {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 20px;
   }
 }

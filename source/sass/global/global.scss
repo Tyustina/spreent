@@ -16,6 +16,7 @@ body {
   background-color: v.$default-white;
 
   transition: overflow 0.3s ease;
+  overflow: hidden;
 }
 
 html {

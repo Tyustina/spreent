@@ -5,6 +5,10 @@
   padding: 14px 25px 15.5px 25px;
   margin-top: 2px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: v.$ff-second;
   font-size: 18px;
   line-height: 140%;
@@ -15,6 +19,7 @@
   background-color: v.$accent;
   outline: 2px solid transparent;
   box-sizing: border-box;
+  border: none;
   border-radius: 136px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -26,17 +31,18 @@
 }
 
 .button:active {
-  color: v.$black50;
+  color: v.$white50;
 }
 
 
 .button--green {
+  position: relative;
   padding: 14px 25px 16px 25px;
 
   color: v.$default-black;
 
   background-color: v.$green;
-
+  transition: all 0.5s ease-in;
 }
 
 .button--green:hover,
@@ -44,8 +50,7 @@
   background-color: transparent;
   color: v.$default-white;
   outline: 2px solid v.$green;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: none
 }
 
 .button--green:active {

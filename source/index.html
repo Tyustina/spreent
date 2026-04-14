@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2">
   <link rel="icon" href="favicon.ico">
-  <!-- <link rel="icon" type="image/png" href="public/favicon-32x32.png"> -->
+  <link rel="icon" type="image/png" href="public/favicon-32x32.png">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -24,10 +24,10 @@
   <header class="header">
     <div class="header__container">
       <div class="logo">
-        <img src="./img/svg/logo.svg" width="126" height="28" alt="Логотип">
+        <a href="#"><img src="./img/svg/logo.svg" width="126" height="28" alt="Логотип"></a>
       </div>
       <div class="header__nav">
-        <a class="header__button button" href="#">Начать</a>
+        <a class="header__button button" href="#form">Начать</a>
         <nav class="nav">
           <ul class="nav__list">
             <li>
@@ -57,8 +57,7 @@
         </div>
         <div class="hero__img">
           <picture>
-            <source media="(min-width: 1440px)" type="image/jpeg"
-              srcset="./img/hero-1-desk.jpg 1x, ./img/hero-1-desk@2x.jpg 2x" width="329" height="200">
+            <source type="image/webp" srcset="./img/hero-1.webp 1x, ./img/hero-1@2x.webp 2x" width="221" height="135">
             <img src="./img/hero-1.jpg" srcset="./img/hero-1@2x.jpg" width="221" height="135" alt="Фотография Артура.">
           </picture>
         </div>
@@ -69,13 +68,12 @@
           <p>актуальные знания</p>
         </div>
         <span>Главные ценности, вокруг которых строится обучение в spreent</span>
-        <a class="hero__button button" href="#">Начать учиться</a>
+        <a class="hero__button button" href="#form">Начать учиться</a>
       </div>
       <div class="hero__photo-content hero__photo-content--2">
         <div class="hero__img">
           <picture>
-            <source media="(min-width: 1440px)" type="image/jpeg"
-              srcset="./img/hero-2-desk.jpg 1x, ./img/hero-2-desk@2x.jpg 2x" width="175" height="256">
+            <source type="image/webp" srcset="./img/hero-2.webp 1x, ./img/hero-2@2x.webp 2x" width="117" height="171">
             <img src="./img/hero-2.jpg" srcset="./img/hero-2@2x.jpg" width="117" height="171" alt="Фотография Сергея.">
           </picture>
         </div>
@@ -89,8 +87,7 @@
         </div>
         <div class="hero__img">
           <picture>
-            <source media="(min-width: 1440px)" type="image/jpeg"
-              srcset="./img/hero-3-desk.jpg 1x, ./img/hero-3-desk@2x.jpg 2x" width="329" height="200">
+            <source type="image/webp" srcset="./img/hero-3.webp 1x, ./img/hero-3@2x.webp 2x" width="221" height="135">
             <img src="./img/hero-3.jpg" srcset="./img/hero-3@2x.jpg" width="221" height="135" alt="Фотография Миши.">
           </picture>
         </div>
@@ -99,23 +96,27 @@
     <section class="about">
       <h2 class="title">Почему выбирают академию spreent</h2>
       <ul class="about__list">
-        <li class="card card--skill">
+        <li class="card card--skill" data-parallax="1">
           <div class="card__content">
             <span>Что я получу?</span>
             <h3>Практические навыки</h3>
-            <p>Даем конкретные знания по&nbsp;профессии. Тренируемся на&nbsp;реальных проектах и&nbsp;делаем свой
+            <p>Даем конкретные знания по&nbsp;профессии. Тренируемся на&nbsp;реальных проектах<br>и делаем свой
               продукт</p>
           </div>
           <div class="card__picture">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="./img/stats-skill-desk.png 1x, ./img/stats-skill-desk@2x.png 2x" type="image/png" width="403"
-                height="545">
-              <img src="./img/stats-skill.png" srcset="./img/stats-skill@2x.png" width="390" height="442" alt="">
+              <source type="image/webp" media="(min-width:1440px)"
+                srcset="./img/stats-skill-desk.webp 1x, ./img/stats-skill-desk@2x.webp 2x" width="403" height="545">
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="./img/stats-skill-desk.png 1x, ./img/stats-skill-desk@2x.png 2x" width="403" height="545">
+              <source type="image/webp" srcset="./img/stats-skill.webp 1x, ./img/stats-skill@2x.webp 2x" width="390"
+                height="442">
+              <img src="./img/stats-skill.png" srcset="./img/stats-skill@2x.png" width="390" height="442"
+                alt="Практика под контролем наставника.">
             </picture>
           </div>
         </li>
-        <li class="card card--teacher">
+        <li class="card card--teacher" data-parallax="0">
           <div class="card__content">
             <span>Кто будет учить?</span>
             <h3>Опытные преподаватели</h3>
@@ -123,14 +124,19 @@
           </div>
           <div class="card__picture">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="./img/stats-teacher-desk.png 1x, ./img/stats-teacher-desk@2x.png 2x" type="image/png"
-                width="441" height="489">
-              <img src="./img/stats-teacher.png" srcset="./img/stats-teacher@2x.png" width="286" height="380" alt="">
+              <source type="image/webp" media="(min-width:1440px)"
+                srcset="./img/stats-teacher-desk.webp 1x, ./img/stats-teacher-desk@2x.webp 2x" width="403" height="545">
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="./img/stats-teacher-desk.png 1x, ./img/stats-teacher-desk@2x.png 2x" width="390" height="442">
+
+              <source type="image/webp" srcset="./img/stats-teacher.webp 1x, ./img/stats-teacher@2x.webp 2x" width="286"
+                height="380">
+              <img src="./img/stats-teacher.png" srcset="./img/stats-teacher@2x.png" width="286" height="380"
+                alt="Преподаватель школы.">
             </picture>
           </div>
         </li>
-        <li class="card card--info">
+        <li class="card card--info" data-parallax="1">
           <div class="card__content">
             <span>Что мне дадут?</span>
             <h3>Актуальные знания</h3>
@@ -138,10 +144,15 @@
           </div>
           <div class="card__picture">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="./img/stats-round-desk.png 1x, ./img/stats-round-desk@2x.png 2x" type="image/png" width="562"
-                height="549">
-              <img src="./img/stats-round.png" srcset="./img/stats-round@2x.png" width="438" height="464" alt="">
+              <source type="image/webp" media="(min-width:1440px)"
+                srcset="./img/stats-round-desk.webp 1x, ./img/stats-round-desk@2x.webp 2x" width="562" height="549">
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="./img/stats-round-desk.png 1x, ./img/stats-round-desk@2x.png 2x" width="562" height="549">
+
+              <source type="image/webp" srcset="./img/stats-round.webp 1x, ./img/stats-round@2x.webp 2x" width="438"
+                height="464">
+              <img src="./img/stats-round.png" srcset="./img/stats-round@2x.png" width="438" height="464"
+                alt="Печать школы.">
             </picture>
           </div>
         </li>
@@ -152,23 +163,35 @@
       <div class="community__content">
         <ul class="community__list">
           <li class="community__item">
-            <picture><img src="./img/photo-1.jpg" srcset="./img/photo-1@2x.jpg" width="90" height="90"
-                alt="Фотография выпускника."></picture>
+            <picture>
+              <source type="image/webp" srcset="./img/photo-1.webp 1x, ./img/photo-1@2x.webp 2x" width="90" height="90">
+              <img src="./img/photo-1.jpg" srcset="./img/photo-1@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника.">
+            </picture>
           </li>
           <li class="community__item">
-            <picture><img src="./img/photo-2.jpg" srcset="./img/photo-2@2x.jpg" width="90" height="90"
-                alt="Фотография выпускника."></picture>
+            <picture>
+              <source type="image/webp" srcset="./img/photo-2.webp 1x, ./img/photo-2@2x.webp 2x" width="90" height="90">
+              <img src="./img/photo-2.jpg" srcset="./img/photo-2@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника.">
+            </picture>
           </li>
           <li class="community__item">
-            <picture><img src="./img/photo-3.jpg" srcset="./img/photo-3@2x.jpg" width="90" height="90"
-                alt="Фотография выпускника."></picture>
+            <picture>
+              <source type="image/webp" srcset="./img/photo-3.webp 1x, ./img/photo-3@2x.webp 2x" width="90" height="90">
+              <img src="./img/photo-3.jpg" srcset="./img/photo-3@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника.">
+            </picture>
           </li>
           <li class="community__item">
-            <picture><img src="./img/photo-4.jpg" srcset="./img/photo-4@2x.jpg" width="90" height="90"
-                alt="Фотография выпускника."></picture>
+            <picture>
+              <source type="image/webp" srcset="./img/photo-4.webp 1x, ./img/photo-4@2x.webp 2x" width="90" height="90">
+              <img src="./img/photo-4.jpg" srcset="./img/photo-4@2x.jpg" width="90" height="90"
+                alt="Фотография выпускника.">
+            </picture>
           </li>
           <li class="community__item">
-            <span>+</span>
+            <a href="#" aria-label="Присоединиться"></a>
           </li>
         </ul>
         <div class="community__stats">
@@ -184,14 +207,13 @@
             <li>
               <span class="community__stats-number" data-target="89">89%</span>
               <p class="community__stats-text">отмечают качество и пользу<br>знаний, полученных в spreent</p>
-
             </li>
           </ul>
         </div>
       </div>
     </section>
     <section class="price">
-      <h2 class="title">Стоимость обучения</h2>
+      <h2 class="title" data-animate="true">Стоимость обучения</h2>
       <div class="price__content">
         <h3>Базовый план</h3>
         <ul class="price__list">
@@ -227,7 +249,7 @@
             <span>или</span>
             <p>419 000 &#8376; <del>552 000 &#8376;</del></p>
           </div>
-          <a class="button" href="#">Купить курс</a>
+          <a class="button" href="#form">Купить курс</a>
         </div>
       </div>
     </section>
@@ -235,7 +257,7 @@
       <div class="work__text-content">
         <h2 class="title">Где работают<br>наши выпускники</h2>
         <p>Начните работать в крупнейших<br>компаниях индустрии</p>
-        <a class="work__button button" href="#">Присоединиться</a>
+        <a class="work__button button" href="#form">Присоединиться</a>
       </div>
       <ul class="work__list">
         <li class="work__item work__item--sber">
@@ -267,26 +289,30 @@
         </li>
       </ul>
     </section>
+
+  </main>
+  <footer class="footer">
     <section class="certificate">
       <div class="certificate__wrapper">
         <div class="certificate__content">
-          <h2 class="certificate__title title">Получи сертификат об&nbsp;успешном завершении курса</h2>
+          <h2 class="certificate__title title" data-animate="true">Получи сертификат об&nbsp;успешном завершении курса
+          </h2>
           <p>Обучение ведется на основании лицензии государственного образца</p>
-          <a class="button" href="#">Начать учиться</a>
+          <a class="button" href="#form" data-animate="true">Начать учиться</a>
         </div>
-        <div class="certificate__img">
+        <div class="certificate__img" data-animate="true">
           <picture>
+            <source type="image/webp" srcset="./img/certificate.webp 1x, ./img/certificate@2x.webp 2x" width="448"
+              height="300">
             <img src="./img/certificate.jpg" srcset="./img/certificate@2x.jpg" width="448" height="300"
               alt="Сертификат об окончании курса.">
           </picture>
         </div>
       </div>
     </section>
-  </main>
-  <footer class="footer">
     <section class="form">
       <h2 class="title">Сделайте апгрейд карьеры</h2>
-      <form class="form__content" action="http://echo.htmlacademy.ru/" method="post">
+      <form class="form__content" id="form" action="http://echo.htmlacademy.ru/" method="post">
         <label><input class="form__input form__input--name" type="text" name="name" placeholder="Имя"
             title="Введите ваше имя кириллицей" required>
         </label>
@@ -300,9 +326,9 @@
       <p>Нажимая кнопку «Оставить заявку», вы подтверждаете<br><a href="#">согласие на обработку персональных данных</a>
       </p>
     </section>
-    <section class="footer__wrapper">
+    <div class="footer__wrapper">
       <div class="logo">
-        <img src="./img/svg/logo-light.svg" width="267" height="59" alt="Логотип">
+        <a href="#"><img src="./img/svg/logo-light.svg" width="267" height="59" alt="Логотип"></a>
       </div>
       <ul class="footer__list">
         <li><a class="footer__link" href="#">Об академии</a></li>
@@ -318,7 +344,7 @@
           <img src="./img/svg/by-mish.svg" width="103" height="41" alt="Логотип Mish.">
         </a>
       </div>
-    </section>
+    </div>
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>

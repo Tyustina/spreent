@@ -19,6 +19,7 @@
     "lint": "npm run w3c && npm run linthtml && npm run html-validate && npm run stylelint && npm run lint-js && npm run ls-lint"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@htmlacademy/editorconfig-cli": "3.0.0",
     "@linthtml/linthtml": "0.9.5",
     "@ls-lint/ls-lint": "2.2.2",
@@ -26,9 +27,10 @@
     "@vitest/ui": "0.34.7",
     "autoprefixer": "10.4.19",
     "cli-progress": "3.12.0",
-    "eslint": "8.57.0",
+    "eslint": "^8.57.0",
     "eslint-config-htmlacademy": "10.0.1",
     "glob": "10.3.10",
+    "globals": "^17.5.0",
     "html-validate": "8.18.1",
     "linthtml-config-htmlacademy": "1.0.23",
     "sass": "1.75.0",
@@ -46,6 +48,7 @@
     "w3c-html-validator": "1.7.0"
   },
   "dependencies": {
+    "scroll-timeline-polyfill": "^1.1.0",
     "swiper": "11.1.1"
   },
   "engines": {

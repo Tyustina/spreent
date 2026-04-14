@@ -1,6 +1,5 @@
 @use "../global/mixin.scss" as m;
 @use "../global/variables.scss" as v;
-@use "../global/animations.scss";
 
 .certificate {
   padding-top: 30px;
@@ -42,12 +41,32 @@
 }
 
 .certificate__title {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in;
+
   @include m.desktop {
     width: unset;
     font-size: 46px;
     line-height: 100%;
     letter-spacing: 0;
   }
+}
+
+.certificate__content a {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in;
+
+  @include m.desktop {
+    margin-top: 4px;
+  }
+}
+
+.certificate__title.animate,
+.certificate__content a.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .certificate__content p {
@@ -58,12 +77,6 @@
   color: v.$black70;
 }
 
-.certificate a {
-  @include m.desktop {
-    margin-top: 5px;
-  }
-}
-
 .certificate__img {
   position: relative;
   width: 448px;
@@ -71,8 +84,9 @@
   margin: 0 auto;
 
   border-radius: 16px;
+  transform: scale(0);
+  transition: all 0.5s ease-in;
   overflow: hidden;
-  animation: scaleIn 0.3s ease-in;
 
   @include m.tablet {
     width: 597px;
@@ -83,6 +97,10 @@
     width: 660px;
     height: 440px;
   }
+}
+
+.certificate__img.animate {
+  transform: scale(1);
 }
 
 .certificate__img img {

@@ -27,6 +27,7 @@
     position: static;
     width: auto;
     padding: 0;
+    margin-right: 2px;
 
     display: flex;
     flex-direction: row;
@@ -47,6 +48,7 @@
 }
 
 .nav__list a {
+  position: relative;
   font-family: v.$ff-second;
   font-size: 30px;
   line-height: 102%;
@@ -97,4 +99,21 @@
 
   transform: rotate(-45deg);
   transition: transform 0.3s ease-in;
+}
+
+
+.nav__list a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: v.$accent;
+  transition: width 0.3s;
+}
+
+.nav__list a:hover::after,
+.nav__list a:focus::after {
+  width: 100%;
 }

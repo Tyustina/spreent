@@ -12,8 +12,14 @@
 
   @include m.desktop {
     padding-top: 120px;
-    padding-bottom: 108px;
+    padding-bottom: 82px;
     gap: 60px;
+  }
+}
+
+.about h2 {
+  @include m.desktop {
+    width: 50%;
   }
 }
 

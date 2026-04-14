@@ -3,6 +3,7 @@
 
 
 .community {
+  @include m.container;
   padding-top: 60px;
   padding-bottom: 117px;
 
@@ -12,7 +13,7 @@
 }
 
 .community__content {
-  @include m.container;
+
   padding-top: 30px;
 
   display: grid;
@@ -64,7 +65,7 @@
   }
 }
 
-.community__item span {
+.community__item a {
   position: relative;
   width: 90px;
   height: 90px;
@@ -72,30 +73,45 @@
   border: 2px solid v.$accent;
   border-radius: 50%;
   background-color: transparent;
+  transition: all 0.3s ease-in-out;
 
   @include m.desktop {
     width: 120px;
     height: 120px;
   }
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
+    background-color: v.$accent;
+    transition: all 0.5s ease-in-out
+  }
+
+  &::before {
     top: calc(50% - 22px);
     left: 50%;
     width: 2px;
     height: 45px;
-    background-color: v.$accent;
+    transform: translateX(-50%);
   }
 
   &::after {
-    content: "";
-    position: absolute;
     top: 50%;
     left: calc(50% - 22px);
     width: 45px;
     height: 2px;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
     background-color: v.$accent;
+    transform: rotate(90deg);
+
+    &::before,
+    &::after {
+      background-color: v.$default-white;
+    }
   }
 }
 
@@ -108,11 +124,15 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+
+  @include m.desktop {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .community__item:not(:last-child) {
-  margin-right: -20px; // Используем margin-right для контроля наложения
-
+  margin-right: -20px;
   -webkit-mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
   mask-image: radial-gradient(circle 50px at calc(100% + 25px) 50%, transparent 100%, black 100%);
 
@@ -121,7 +141,6 @@
 
     -webkit-mask-image: radial-gradient(circle 65px at calc(100% + 30px) 50%, transparent 100%, black 100%);
     mask-image: radial-gradient(circle 65px at calc(100% + 30px) 50%, transparent 100%, black 100%);
-
   }
 }
 

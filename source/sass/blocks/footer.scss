@@ -2,9 +2,13 @@
 @use "../global/variables.scss" as v;
 
 .footer {
-  padding-bottom: 38px;
+  padding-bottom: 40px;
 
   background-color: v.$default-black;
+
+  @include m.desktop {
+    padding-bottom: 38px;
+  }
 }
 
 .footer__wrapper {
@@ -26,7 +30,7 @@
   @include m.list-reset;
 
   padding-top: 40px;
-  padding-bottom: 90px;
+  padding-bottom: 74px;
 
   columns: 1;
   gap: 15px;
@@ -40,14 +44,13 @@
     padding: 0;
     margin: 0 auto;
     grid-column: 2/-1;
+    margin-top: -1px;
   }
 }
 
 .footer__list li {
-  @include m.desktop {
-    break-inside: avoid-column;
-    margin-bottom: 15px;
-  }
+  break-inside: avoid-column;
+  margin-bottom: 15px;
 }
 
 .footer__link {
@@ -57,6 +60,13 @@
   font-weight: 500;
   color: v.$default-white;
   text-decoration: none;
+
+  transition: opacity 0.3s ease-in;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  opacity: 0.6;
 }
 
 .footer__developed {
@@ -83,7 +93,14 @@
 }
 
 .footer__developed-logo {
+
+  transition: opacity 0.3s ease-in;
+
   @include m.desktop {
     padding: 6px;
   }
+}
+
+.footer__developed-logo:hover {
+  opacity: 0.6;
 }

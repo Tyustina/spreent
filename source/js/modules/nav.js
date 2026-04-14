@@ -20,11 +20,11 @@ function openCloseNav() {
       }
     });
 
-    // body.addEventListener('click', (e) => {
-    //   if (e.target === overlay) {
-    //     closeNav();
-    //   }
-    // });
+    body.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeNav();
+      }
+    });
   } else {
     openNav();
   }
