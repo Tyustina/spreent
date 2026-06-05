@@ -19,12 +19,14 @@
     background-color: v.$black10;
   }
 
-  @include m.desktop {
-    padding-top: 16px;
-
+  @include m.large-tablet {
     &::after {
       display: none;
     }
+  }
+
+  @include m.desktop {
+    padding-top: 16px;
   }
 }
 
@@ -41,6 +43,10 @@
 .header__nav {
   display: flex;
   align-items: center;
+
+  @include m.tablet {
+    column-gap: 20px;
+  }
 
   @include m.large-tablet {
     flex-direction: row-reverse;

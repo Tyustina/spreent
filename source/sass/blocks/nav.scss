@@ -72,6 +72,10 @@
   background-color: transparent;
   border: none;
 
+  @include m.tablet {
+    margin-right: -10px;
+  }
+
   @include m.large-tablet {
     display: none;
   }
