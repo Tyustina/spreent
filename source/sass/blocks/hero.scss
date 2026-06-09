@@ -290,7 +290,7 @@
   left: -26px;
   width: 29px;
   height: 29px;
-  background-image: url("/__spritemap#sprite-cursor-view");
+  background-image: url("../__spritemap#sprite-cursor-view");
   background-repeat: no-repeat;
   transform-origin: 50px 50px;
   animation: arcMove 2.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
@@ -309,5 +309,5 @@
 .hero__photo-content--1>.hero__img-desc::before {
   width: 26px;
   height: 26px;
-  background-image: url("/__spritemap#sprite-hand-view");
+  background-image: url("../__spritemap#sprite-hand-view");
 }
